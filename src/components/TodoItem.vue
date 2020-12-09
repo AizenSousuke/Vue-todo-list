@@ -1,6 +1,6 @@
 <template>
 	<div class="todo-item" v-bind:class="{ 'is-complete': todo.completed }">
-		<p>{{ todo.title }}</p>
+		<h2>{{ todo.title }}</h2>
 		<div>
 			<input
 				type="checkbox"
@@ -30,19 +30,24 @@ export default {
 <style scoped>
 .todo-item {
     font-weight: 700;
+    background: lightblue;
+    border-radius: 1em;
+    margin: 0.5em;
+    padding: 0.5em;
 }
 .is-complete {
     text-decoration: line-through;
 }
 .checkbox {
-	transform: scale(2);
-    margin: 1em;
+	transform: scale(2.5);
+    margin: 2em;
 }
 .del {
 	background-color: red;
 	color: white;
+    width: 100%;
 	font-size: 1em;
 	border-radius: 50px;
-	padding: 10px 45px 10px 45px;
+	padding: 10px;
 }
 </style>
